@@ -35,7 +35,9 @@ class ColorClassifier(tf.keras.Model):
     def call(self, inputs, training=False):
         x = inputs
         for layer in self.layers:
-            if training or not isinstance(layer, tf.keras.layers.Dropout):
+            if not isinstance(layer, tf.keras.layers.Dropout):
                 x = layer(x)
+            else:
+                x = layer(x, training=training)
         return x
 
