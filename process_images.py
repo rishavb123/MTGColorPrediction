@@ -4,7 +4,7 @@ import os
 import progressbar
 
 def process(img):
-    img = cv2.resize(img, (312, 228))
+    img = cv2.resize(img, (156, 114))
     return img
 
 if __name__ == '__main__':
