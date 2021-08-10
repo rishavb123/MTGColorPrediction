@@ -10,7 +10,7 @@ def load_data(stamp=0):
         stamp = os.listdir("./data/processed_images")[-1]
 
     pbar = progressbar.progressbar
-
+    
     with open("./data/oracle-cards.json", encoding="utf8") as f:
         data = json.load(f)
 
@@ -27,7 +27,7 @@ def load_data(stamp=0):
     X = []
     Y = []
 
-    for card in card_data:
+    for card in pbar(card_data):
         card_id, colors = card
         X.append(cv2.imread(f"./data/processed_images/{stamp}/{card_id}.jpg"))
         Y.append([
