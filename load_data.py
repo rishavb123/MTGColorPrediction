@@ -10,7 +10,7 @@ def load_data(stamp=0):
         stamp = os.listdir("./data/processed_images")[-1]
 
     pbar = progressbar.progressbar
-    
+
     with open("./data/oracle-cards.json", encoding="utf8") as f:
         data = json.load(f)
 
@@ -38,4 +38,4 @@ def load_data(stamp=0):
             int('G' in colors),
         ])
 
-    return np.array(X), np.array(Y)
+    return np.array(X, dtype=np.float32), np.array(Y, dtype=np.float32)
