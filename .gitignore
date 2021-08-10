@@ -2,3 +2,5 @@ data/imgs
 data/processed_images
 .vscode
 temp
+__pycache__
+*.pyc
