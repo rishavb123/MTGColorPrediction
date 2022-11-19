@@ -5,7 +5,7 @@ import time
 from constants import LEARNING_RATE
 from load_data import load_data
 from model import ColorClassifier
-from timer import time_func
+from utils import time_func
 
 model = ColorClassifier()
 
