@@ -14,7 +14,7 @@ X, y = time_func(load_data, "Loading data into memory . . .")
 print(X.shape, y.shape)
 
 optimizer = tf.keras.optimizers.Adam(LEARNING_RATE)
-cross_entropy = tf.keras.losses.BinaryCrossentropy(from_logits=True)
+cross_entropy = tf.keras.losses.BinaryCrossentropy()
 
 model.compile(optimizer=optimizer, loss=cross_entropy, metrics=['accuracy'])
 model.fit(X, y, epochs=10)
